@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ramon Linao | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    position: sticky;
+    top: 0;
+    background: rgba(15,23,42,0.8);
+    backdrop-filter: blur(10px);
+}
+
+nav h2 {
+    color: #38bdf8;
+}
+
+nav a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 40px;
+    color: #38bdf8;
+}
+
+.hero p {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #38bdf8;
+    color: black;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+/* SECTION */
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* CARDS */
+.card {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px 0;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* SKILLS */
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+/* PROJECTS */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    opacity: 0.6;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+    <h2>Ramon</h2>
+    <div>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Hi, I'm Ramon 👋</h1>
+    <p>IT Student | Future Cloud System Administrator</p>
+    <a href="#" class="btn">Download Resume</a>
+</div>
+
+<section>
+
+<!-- SKILLS -->
+<div class="card" id="skills">
+    <h2>💻 Skills</h2>
+    <div class="skills">
+        <div>Linux</div>
+        <div>SQL Server</div>
+        <div>Docker</div>
+        <div>Networking</div>
+        <div>Windows Server</div>
+    </div>
+</div>
+
+<!-- PROJECTS -->
+<div class="card" id="projects">
+    <h2>📁 Projects</h2>
+
+    <div class="projects">
+        <div class="project">
+            <img src="images/project1.jpg">
+            <h3>MIS Infrastructure</h3>
+            <p>SQL Server, backups, monitoring.</p>
+        </div>
+
+        <div class="project">
+            <img src="images/project2.jpg">
+            <h3>Docker Web Server</h3>
+            <p>Containerized application deployment.</p>
+        </div>
+    </div>
+</div>
+
+<!-- CONTACT -->
+<div class="card" id="contact">
+    <h2>📫 Contact</h2>
+    <p>Email: ramonlinao22@gmail.com</p>
+</div>
+
+</section>
+
+<footer>
+    © 2026 Ramon Linao
+</footer>
+
+</body>
+</html>
