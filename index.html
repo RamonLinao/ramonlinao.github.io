@@ -170,6 +170,7 @@
 <footer>
     © 2026 Ramon Linao
 </footer>
+<script>
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -181,30 +182,6 @@ const observer = new IntersectionObserver(entries => {
 document.querySelectorAll('.fade-in').forEach(el => {
     observer.observe(el);
 });
-</script>
-<!-- your HTML content above -->
-<script>
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-
-            entry.target.classList.add('show');
-
-            document.querySelectorAll('.fill').forEach(el => {
-                
-		if (el.classList.contains('linux')) el.style.width = '90%';
-                if (el.classList.contains('sql')) el.style.width = '85%';
-                if (el.classList.contains('docker')) el.style.width = '80%';
-                if (el.classList.contains('net')) el.style.width = '75%';
-                if (el.classList.contains('win')) el.style.width = '85%';
-            
-	    });
-
-        }
-    });
-});
-
-document.querySelectorAll('#skills').forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
