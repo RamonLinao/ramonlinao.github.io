@@ -132,10 +132,17 @@ nav a:hover {
 /* SKILL LEVELS */
 .fill {
     height: 100%;
-    width: 0;   /* IMPORTANT */
+    width: 0;
     background: #38bdf8;
-    transition: width 1.5s ease;
+    transition: width 2s ease;
 }
+
+/* Animate ONLY when visible */
+.fade-in.show .fill.linux { width: 90%; }
+.fade-in.show .fill.sql { width: 85%; }
+.fade-in.show .fill.docker { width: 80%; }
+.fade-in.show .fill.net { width: 75%; }
+.fade-in.show .fill.win { width: 85%; }
 
 /* PROJECTS */
 .projects {
