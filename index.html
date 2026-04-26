@@ -10,8 +10,52 @@
 
     <!-- External CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-</head>
 
+<script>
+// ===== CPU + RAM SIMULATION =====
+function updateStats() {
+    let cpu = Math.floor(Math.random() * 80) + 10;
+    let ram = Math.floor(Math.random() * 70) + 20;
+
+    document.querySelector(".cpu").style.width = cpu + "%";
+    document.querySelector(".ram").style.width = ram + "%";
+
+    document.getElementById("cpuText").innerText = cpu + "%";
+    document.getElementById("ramText").innerText = ram + "%";
+}
+
+// update every 2 seconds
+setInterval(updateStats, 2000);
+
+// ===== LOG SIMULATION =====
+const logs = [
+    "Initializing server...",
+    "Connecting to database...",
+    "Deployment successful.",
+    "Monitoring CPU usage...",
+    "New user session started.",
+    "Docker container running.",
+    "Backup completed.",
+    "Security scan passed.",
+    "Nginx server active.",
+];
+
+function addLog() {
+    const box = document.getElementById("logBox");
+    const msg = logs[Math.floor(Math.random() * logs.length)];
+
+    const line = document.createElement("div");
+    line.textContent = "> " + msg;
+
+    box.appendChild(line);
+    box.scrollTop = box.scrollHeight;
+}
+
+// new log every 1.5 sec
+setInterval(addLog, 1500);
+</script>
+
+</head>
 <body>
 
 <!-- NAVBAR -->
