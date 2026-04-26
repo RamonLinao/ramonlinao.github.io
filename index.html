@@ -1,133 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ramon Linao | Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramon Linao | Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-<style>
-.project a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 12px;
-    background: var(--accent);
-    color: black;
-    text-decoration: none;
-    border-radius: 6px;
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background: #0f172a;
-    color: white;
-}
-
-/* NAVBAR */
-nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 50px;
-    position: sticky;
-    top: 0;
-    background: rgba(15,23,42,0.8);
-    backdrop-filter: blur(10px);
-}
-
-nav h2 {
-    color: #38bdf8;
-}
-
-nav a {
-    margin-left: 20px;
-    color: white;
-    text-decoration: none;
-}
-
-/* HERO */
-.hero {
-    text-align: center;
-    padding: 80px 20px;
-}
-
-.hero h1 {
-    font-size: 40px;
-    color: #38bdf8;
-}
-
-.hero p {
-    margin: 10px 0;
-    font-size: 18px;
-}
-
-.btn {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background: #38bdf8;
-    color: black;
-    border-radius: 6px;
-    text-decoration: none;
-}
-
-/* SECTION */
-section {
-    max-width: 1100px;
-    margin: auto;
-    padding: 40px 20px;
-}
-
-/* CARDS */
-.card {
-    background: rgba(255,255,255,0.05);
-    padding: 20px;
-    border-radius: 12px;
-    margin: 20px 0;
-    backdrop-filter: blur(10px);
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-/* SKILLS */
-.skills {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 20px;
-    text-align: center;
-}
-
-/* PROJECTS */
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.project img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 20px;
-    opacity: 0.6;
-}
-</style>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- NAV -->
+<!-- NAVBAR -->
 <nav>
     <h2>Ramon</h2>
     <div>
@@ -138,21 +25,21 @@ footer {
 </nav>
 
 <!-- HERO -->
-<div class="hero">
+<section class="hero">
     <h1>Hi, I'm Ramon 👋</h1>
     <p>
-    IT Student specializing in Cloud Systems, Networking (CCNA), and Cybersecurity. 
-    Hands-on experience with Windows Server, Linux, Docker, and infrastructure deployment.
-</p>
-    <a href="resume.pdf" class="btn" target="_blank" download>
-Download Resume
-</a>
-</div>
+        IT Student specializing in Cloud Systems, Networking (CCNA), and Cybersecurity.
+        Hands-on experience with Windows Server, Linux, Docker, and infrastructure deployment.
+    </p>
 
-<section>
+    <div class="buttons">
+        <a href="resume.pdf" class="btn" download>📄 Download Resume</a>
+        <a href="resume.pdf" class="btn" target="_blank">👁 View Resume</a>
+    </div>
+</section>
 
 <!-- SKILLS -->
-<div class="card" id="skills">
+<section class="card fade-in" id="skills">
     <h2>💻 Skills</h2>
     <div class="skills">
         <div>Linux</div>
@@ -161,59 +48,108 @@ Download Resume
         <div>Networking</div>
         <div>Windows Server</div>
     </div>
-</div>
+</section>
 
 <!-- PROJECTS -->
-<div class="card">
+<section class="card fade-in" id="projects">
     <h2>📁 Projects</h2>
 
     <div class="projects">
 
+        <!-- Project 1 -->
         <div class="project">
-            <img src="images/project1.jpg">
-            <h3>MIS Infrastructure Deployment</h3>
+            <h3>MIS Infrastructure</h3>
             <p>Designed SQL Server environment with backup, replication, and monitoring.</p>
+            <div class="tags">
+                <span>SQL Server</span>
+                <span>Backup</span>
+                <span>Replication</span>
+            </div>
+            <div class="links">
+                <a href="#" target="_blank">🔗 GitHub</a>
+            </div>
         </div>
 
+        <!-- Project 2 -->
         <div class="project">
-            <img src="images/project2.jpg">
             <h3>Docker Web Server</h3>
             <p>Built and deployed containerized web application using Docker and Nginx.</p>
+            <div class="tags">
+                <span>Docker</span>
+                <span>Nginx</span>
+                <span>Linux</span>
+            </div>
+            <div class="links">
+                <a href="#" target="_blank">🔗 GitHub</a>
+            </div>
         </div>
 
+        <!-- Project 3 -->
         <div class="project">
-            <img src="images/project3.jpg">
             <h3>Active Directory Lab</h3>
             <p>Configured domain controller, users, group policies, and permissions.</p>
+            <div class="tags">
+                <span>Windows Server</span>
+                <span>AD</span>
+                <span>GPO</span>
+            </div>
+            <div class="links">
+                <a href="#" target="_blank">🔗 GitHub</a>
+            </div>
         </div>
 
+        <!-- Project 4 -->
         <div class="project">
-            <img src="images/project4.jpg">
-            <h3>Network Configuration (CCNA)</h3>
-            <p>Implemented VLANs, DNS, DHCP, and routing concepts.</p>
+            <h3>Network Config (CCNA)</h3>
+            <p>Implemented VLANs, DHCP, DNS, and routing concepts.</p>
+            <div class="tags">
+                <span>Networking</span>
+                <span>VLAN</span>
+                <span>Routing</span>
+            </div>
+            <div class="links">
+                <a href="#" target="_blank">🔗 GitHub</a>
+            </div>
         </div>
 
-        <div class="project">
-            <img src="images/project5.jpg">
-            <h3>Penetration Testing Lab</h3>
-            <p>Performed vulnerability scanning and basic ethical hacking techniques.</p>
+        <!-- Project 5 (Cybersecurity) -->
+        <div class="project highlight">
+            <h3>Cybersecurity Lab</h3>
+            <p>Performed vulnerability scanning and penetration testing using Kali Linux and Nmap.</p>
+            <div class="tags">
+                <span>Kali Linux</span>
+                <span>Nmap</span>
+                <span>Security</span>
+            </div>
+            <div class="links">
+                <a href="#" target="_blank">🔗 GitHub</a>
+            </div>
         </div>
 
     </div>
-</div>
+</section>
+
 <!-- CONTACT -->
-<div class="card" id="contact">
+<section class="card fade-in" id="contact">
     <h2>📫 Contact</h2>
     <p>Email: ramonlinao22@gmail.com</p>
-</div>
-
 </section>
 
 <footer>
     © 2026 Ramon Linao
 </footer>
+<script>
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+});
 
+document.querySelectorAll('.fade-in').forEach(el => {
+    observer.observe(el);
+});
+</script>
 </body>
 </html>
-<!-- deploy fix -->
-<!-- deploy fix -->
