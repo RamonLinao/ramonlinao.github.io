@@ -41,12 +41,44 @@
 <!-- SKILLS -->
 <section class="card fade-in" id="skills">
     <h2>💻 Skills</h2>
-    <div class="skills">
-        <div>Linux</div>
-        <div>SQL Server</div>
-        <div>Docker</div>
-        <div>Networking</div>
-        <div>Windows Server</div>
+
+    <div class="skills-grid">
+
+        <div class="skill">
+            <h3>🐧 Linux</h3>
+            <div class="bar">
+                <div class="fill linux"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <h3>🗄 SQL Server</h3>
+            <div class="bar">
+                <div class="fill sql"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <h3>🐳 Docker</h3>
+            <div class="bar">
+                <div class="fill docker"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <h3>🌐 Networking</h3>
+            <div class="bar">
+                <div class="fill net"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <h3>🖥 Windows Server</h3>
+            <div class="bar">
+                <div class="fill win"></div>
+            </div>
+        </div>
+
     </div>
 </section>
 
@@ -138,7 +170,6 @@
 <footer>
     © 2026 Ramon Linao
 </footer>
-<script>
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -150,6 +181,30 @@ const observer = new IntersectionObserver(entries => {
 document.querySelectorAll('.fade-in').forEach(el => {
     observer.observe(el);
 });
+</script>
+<!-- your HTML content above -->
+<script>
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+
+            entry.target.classList.add('show');
+
+            document.querySelectorAll('.fill').forEach(el => {
+                
+		if (el.classList.contains('linux')) el.style.width = '90%';
+                if (el.classList.contains('sql')) el.style.width = '85%';
+                if (el.classList.contains('docker')) el.style.width = '80%';
+                if (el.classList.contains('net')) el.style.width = '75%';
+                if (el.classList.contains('win')) el.style.width = '85%';
+            
+	    });
+
+        }
+    });
+});
+
+document.querySelectorAll('#skills').forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
