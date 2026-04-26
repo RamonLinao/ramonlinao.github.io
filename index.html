@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
     <!-- External CSS -->
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 
 <body>
@@ -40,47 +40,97 @@
 
 <!-- SKILLS -->
 <section class="card fade-in" id="skills">
-    <h2>💻 Skills</h2>
+    <h2>💻 Skills Dashboard</h2>
 
     <div class="skills-grid">
 
         <div class="skill">
-            <h3>🐧 Linux</h3>
-            <div class="bar">
-                <div class="fill linux"></div>
-            </div>
+            <h3><i class="devicon-linux-plain"></i> Linux <span class="count" data-target="90">0%</span></h3>
+            <div class="bar"><div class="fill linux"></div></div>
         </div>
 
         <div class="skill">
-            <h3>🗄 SQL Server</h3>
-            <div class="bar">
-                <div class="fill sql"></div>
-            </div>
+            <h3><i class="devicon-microsoftsqlserver-plain"></i> SQL Server <span class="count" data-target="85">0%</span></h3>
+            <div class="bar"><div class="fill sql"></div></div>
         </div>
 
         <div class="skill">
-            <h3>🐳 Docker</h3>
-            <div class="bar">
-                <div class="fill docker"></div>
-            </div>
+            <h3><i class="devicon-docker-plain"></i> Docker <span class="count" data-target="80">0%</span></h3>
+            <div class="bar"><div class="fill docker"></div></div>
         </div>
 
         <div class="skill">
-            <h3>🌐 Networking</h3>
-            <div class="bar">
-                <div class="fill net"></div>
-            </div>
+            <h3><i class="devicon-networkx-original"></i> Networking <span class="count" data-target="75">0%</span></h3>
+            <div class="bar"><div class="fill net"></div></div>
         </div>
 
         <div class="skill">
-            <h3>🖥 Windows Server</h3>
-            <div class="bar">
-                <div class="fill win"></div>
-            </div>
+            <h3><i class="devicon-windows8-original"></i> Windows Server <span class="count" data-target="85">0%</span></h3>
+            <div class="bar"><div class="fill win"></div></div>
+        </div>
+
+</div>   <!-- closes skills-grid -->
+</section>  <!-- closes SKILLS section -->
+
+<!-- SYSTEM STATS -->
+<section class="card fade-in">
+    <h2>📊 System Stats</h2>
+
+    <div class="stats">
+
+        <div class="stat">
+            <h3 class="count" data-target="15">0</h3>
+            <p>Projects Completed</p>
+        </div>
+
+        <div class="stat">
+            <h3 class="count" data-target="3">0</h3>
+            <p>Servers Deployed</p>
+        </div>
+
+        <div class="stat">
+            <h3 class="count" data-target="99">0</h3>
+            <p>% Uptime</p>
+        </div>
+
+        <div class="stat">
+            <h3 class="count" data-target="24">0</h3>
+            <p>Hours Lab Work</p>
         </div>
 
     </div>
-</section>
+</section>   <!-- END OF System Stats -->
+<section class="card fade-in">
+    <h2>🖥 DevOps Dashboard</h2>
+
+    <div class="dashboard">
+
+        <!-- CPU -->
+        <div class="monitor">
+            <h3>CPU Usage</h3>
+            <div class="bar">
+                <div class="fill cpu"></div>
+            </div>
+            <p id="cpuText">0%</p>
+        </div>
+
+        <!-- RAM -->
+        <div class="monitor">
+            <h3>RAM Usage</h3>
+            <div class="bar">
+                <div class="fill ram"></div>
+            </div>
+            <p id="ramText">0%</p>
+        </div>
+
+        <!-- LOGS -->
+        <div class="logs">
+            <h3>System Logs</h3>
+            <div id="logBox"></div>
+        </div>
+
+    </div>
+</section>   
 
 <!-- PROJECTS -->
 <section class="card fade-in" id="projects">
