@@ -8,60 +8,13 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <!-- External CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
-<!-- YOUR CSS (THIS WAS MISSING) -->
+    <!-- YOUR CSS -->
     <link rel="stylesheet" href="./style.css">
 </head>
-<body>
 
-<script>
-// ===== CPU + RAM SIMULATION =====
-
-function updateStats() {
-    let cpu = Math.floor(Math.random() * 80) + 10;
-    let ram = Math.floor(Math.random() * 70) + 20;
-
-    document.querySelector(".cpu").style.width = cpu + "%";
-    document.querySelector(".ram").style.width = ram + "%";
-
-    document.getElementById("cpuText").innerText = cpu + "%";
-    document.getElementById("ramText").innerText = ram + "%";
-}
-
-// update every 2 seconds
-setInterval(updateStats, 2000);
-
-// ===== LOG SIMULATION =====
-const logs = [
-    "Initializing server...",
-    "Connecting to database...",
-    "Deployment successful.",
-    "Monitoring CPU usage...",
-    "New user session started.",
-    "Docker container running.",
-    "Backup completed.",
-    "Security scan passed.",
-    "Nginx server active.",
-];
-
-function addLog() {
-    const box = document.getElementById("logBox");
-    const msg = logs[Math.floor(Math.random() * logs.length)];
-
-    const line = document.createElement("div");
-    line.textContent = "> " + msg;
-
-    box.appendChild(line);
-    box.scrollTop = box.scrollHeight;
-}
-
-// new log every 1.5 sec
-setInterval(addLog, 1500);
-</script>
-
-</head>
 <body>
 
 <!-- NAVBAR -->
@@ -119,8 +72,8 @@ setInterval(addLog, 1500);
             <div class="bar"><div class="fill win"></div></div>
         </div>
 
-</div>   <!-- closes skills-grid -->
-</section>  <!-- closes SKILLS section -->
+    </div>
+</section>
 
 <!-- SYSTEM STATS -->
 <section class="card fade-in">
@@ -149,38 +102,33 @@ setInterval(addLog, 1500);
         </div>
 
     </div>
-</section>   <!-- END OF System Stats -->
+</section>
+
+<!-- DEVOPS DASHBOARD -->
 <section class="card fade-in">
     <h2>🖥 DevOps Dashboard</h2>
 
     <div class="dashboard">
 
-        <!-- CPU -->
         <div class="monitor">
             <h3>CPU Usage</h3>
-            <div class="bar">
-                <div class="fill cpu"></div>
-            </div>
+            <div class="bar"><div class="fill cpu"></div></div>
             <p id="cpuText">0%</p>
         </div>
 
-        <!-- RAM -->
         <div class="monitor">
             <h3>RAM Usage</h3>
-            <div class="bar">
-                <div class="fill ram"></div>
-            </div>
+            <div class="bar"><div class="fill ram"></div></div>
             <p id="ramText">0%</p>
         </div>
 
-        <!-- LOGS -->
         <div class="logs">
             <h3>System Logs</h3>
             <div id="logBox"></div>
         </div>
 
     </div>
-</section>   
+</section>
 
 <!-- PROJECTS -->
 <section class="card fade-in" id="projects">
@@ -188,74 +136,19 @@ setInterval(addLog, 1500);
 
     <div class="projects">
 
-        <!-- Project 1 -->
         <div class="project">
             <h3>MIS Infrastructure</h3>
-            <p>Designed SQL Server environment with backup, replication, and monitoring.</p>
-            <div class="tags">
-                <span>SQL Server</span>
-                <span>Backup</span>
-                <span>Replication</span>
-            </div>
-            <div class="links">
-                <a href="#" target="_blank">🔗 GitHub</a>
-            </div>
+            <p>SQL Server environment with backup & replication.</p>
         </div>
 
-        <!-- Project 2 -->
         <div class="project">
             <h3>Docker Web Server</h3>
-            <p>Built and deployed containerized web application using Docker and Nginx.</p>
-            <div class="tags">
-                <span>Docker</span>
-                <span>Nginx</span>
-                <span>Linux</span>
-            </div>
-            <div class="links">
-                <a href="#" target="_blank">🔗 GitHub</a>
-            </div>
+            <p>Containerized app using Docker + Nginx.</p>
         </div>
 
-        <!-- Project 3 -->
         <div class="project">
             <h3>Active Directory Lab</h3>
-            <p>Configured domain controller, users, group policies, and permissions.</p>
-            <div class="tags">
-                <span>Windows Server</span>
-                <span>AD</span>
-                <span>GPO</span>
-            </div>
-            <div class="links">
-                <a href="#" target="_blank">🔗 GitHub</a>
-            </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="project">
-            <h3>Network Config (CCNA)</h3>
-            <p>Implemented VLANs, DHCP, DNS, and routing concepts.</p>
-            <div class="tags">
-                <span>Networking</span>
-                <span>VLAN</span>
-                <span>Routing</span>
-            </div>
-            <div class="links">
-                <a href="#" target="_blank">🔗 GitHub</a>
-            </div>
-        </div>
-
-        <!-- Project 5 (Cybersecurity) -->
-        <div class="project highlight">
-            <h3>Cybersecurity Lab</h3>
-            <p>Performed vulnerability scanning and penetration testing using Kali Linux and Nmap.</p>
-            <div class="tags">
-                <span>Kali Linux</span>
-                <span>Nmap</span>
-                <span>Security</span>
-            </div>
-            <div class="links">
-                <a href="#" target="_blank">🔗 GitHub</a>
-            </div>
+            <p>Domain controller + GPO + users.</p>
         </div>
 
     </div>
@@ -270,63 +163,40 @@ setInterval(addLog, 1500);
 <footer>
     © 2026 Ramon Linao
 </footer>
-<script>
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-        }
-    });
-});
 
-document.querySelectorAll('.fade-in').forEach(el => {
-    observer.observe(el);
-});
+<!-- ✅ ONLY SCRIPT (CLEAN + FIXED) -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-    // ===== FADE-IN ANIMATION =====
+    // FADE-IN
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('show');
-            }
+            if (entry.isIntersecting) entry.target.classList.add('show');
         });
     });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-    document.querySelectorAll('.fade-in').forEach(el => {
-        observer.observe(el);
-    });
-
-    // ===== SKILLS =====
-    const skills = {
-        linux: 90,
-        sql: 85,
-        docker: 80,
-        net: 75,
-        win: 85
-    };
+    // SKILLS
+    const skills = { linux:90, sql:85, docker:80, net:75, win:85 };
 
     Object.keys(skills).forEach(skill => {
         const bar = document.querySelector(`.fill.${skill}`);
         const text = document.querySelector(`.${skill}-text`);
-
         if (bar) bar.style.width = skills[skill] + "%";
         if (text) text.innerText = skills[skill] + "%";
     });
 
-    // ===== SYSTEM STATS =====
+    // STATS
     const stats = [
-        { id: "projects", value: 15 },
-        { id: "servers", value: 3 },
-        { id: "uptime", value: 99 },
-        { id: "hours", value: 24 }
+        { id:"projects", value:15 },
+        { id:"servers", value:3 },
+        { id:"uptime", value:99 },
+        { id:"hours", value:24 }
     ];
 
     stats.forEach(stat => {
         let count = 0;
         const el = document.getElementById(stat.id);
-
         if (!el) return;
 
         const interval = setInterval(() => {
@@ -335,6 +205,228 @@ document.addEventListener("DOMContentLoaded", function () {
             if (count >= stat.value) clearInterval(interval);
         }, 30);
     });
+
+    // DEVOPS
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramon Linao | Portfolio</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- YOUR CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <h2>Ramon</h2>
+    <div>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Hi, I'm Ramon 👋</h1>
+    <p>
+        IT Student specializing in Cloud Systems, Networking (CCNA), and Cybersecurity.
+        Hands-on experience with Windows Server, Linux, Docker, and infrastructure deployment.
+    </p>
+
+    <div class="buttons">
+        <a href="resume.pdf" class="btn" download>📄 Download Resume</a>
+        <a href="resume.pdf" class="btn" target="_blank">👁 View Resume</a>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section class="card fade-in" id="skills">
+    <h2>💻 Skills Dashboard</h2>
+
+    <div class="skills-grid">
+
+        <div class="skill">
+            <h3><i class="devicon-linux-plain"></i> Linux <span class="count linux-text">0%</span></h3>
+            <div class="bar"><div class="fill linux"></div></div>
+        </div>
+
+        <div class="skill">
+            <h3><i class="devicon-microsoftsqlserver-plain"></i> SQL Server <span class="count sql-text">0%</span></h3>
+            <div class="bar"><div class="fill sql"></div></div>
+        </div>
+
+        <div class="skill">
+            <h3><i class="devicon-docker-plain"></i> Docker <span class="count docker-text">0%</span></h3>
+            <div class="bar"><div class="fill docker"></div></div>
+        </div>
+
+        <div class="skill">
+            <h3><i class="devicon-networkx-original"></i> Networking <span class="count net-text">0%</span></h3>
+            <div class="bar"><div class="fill net"></div></div>
+        </div>
+
+        <div class="skill">
+            <h3><i class="devicon-windows8-original"></i> Windows Server <span class="count win-text">0%</span></h3>
+            <div class="bar"><div class="fill win"></div></div>
+        </div>
+
+    </div>
+</section>
+
+<!-- SYSTEM STATS -->
+<section class="card fade-in">
+    <h2>📊 System Stats</h2>
+
+    <div class="stats">
+
+        <div class="stat">
+            <h3 id="projects">0</h3>
+            <p>Projects Completed</p>
+        </div>
+
+        <div class="stat">
+            <h3 id="servers">0</h3>
+            <p>Servers Deployed</p>
+        </div>
+
+        <div class="stat">
+            <h3 id="uptime">0</h3>
+            <p>% Uptime</p>
+        </div>
+
+        <div class="stat">
+            <h3 id="hours">0</h3>
+            <p>Hours Lab Work</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- DEVOPS DASHBOARD -->
+<section class="card fade-in">
+    <h2>🖥 DevOps Dashboard</h2>
+
+    <div class="dashboard">
+
+        <div class="monitor">
+            <h3>CPU Usage</h3>
+            <div class="bar"><div class="fill cpu"></div></div>
+            <p id="cpuText">0%</p>
+        </div>
+
+        <div class="monitor">
+            <h3>RAM Usage</h3>
+            <div class="bar"><div class="fill ram"></div></div>
+            <p id="ramText">0%</p>
+        </div>
+
+        <div class="logs">
+            <h3>System Logs</h3>
+            <div id="logBox"></div>
+        </div>
+
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="card fade-in" id="projects">
+    <h2>📁 Projects</h2>
+
+    <div class="projects">
+
+        <div class="project">
+            <h3>MIS Infrastructure</h3>
+            <p>SQL Server environment with backup & replication.</p>
+        </div>
+
+        <div class="project">
+            <h3>Docker Web Server</h3>
+            <p>Containerized app using Docker + Nginx.</p>
+        </div>
+
+        <div class="project">
+            <h3>Active Directory Lab</h3>
+            <p>Domain controller + GPO + users.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="card fade-in" id="contact">
+    <h2>📫 Contact</h2>
+    <p>Email: ramonlinao22@gmail.com</p>
+</section>
+
+<footer>
+    © 2026 Ramon Linao
+</footer>
+
+<!-- ✅ ONLY SCRIPT (CLEAN + FIXED) -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    // FADE-IN
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add('show');
+        });
+    });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // SKILLS
+    const skills = { linux:90, sql:85, docker:80, net:75, win:85 };
+
+    Object.keys(skills).forEach(skill => {
+        const bar = document.querySelector(`.fill.${skill}`);
+        const text = document.querySelector(`.${skill}-text`);
+        if (bar) bar.style.width = skills[skill] + "%";
+        if (text) text.innerText = skills[skill] + "%";
+    });
+
+    // STATS
+    const stats = [
+        { id:"projects", value:15 },
+        { id:"servers", value:3 },
+        { id:"uptime", value:99 },
+        { id:"hours", value:24 }
+    ];
+
+    stats.forEach(stat => {
+        let count = 0;
+        const el = document.getElementById(stat.id);
+        if (!el) return;
+
+        const interval = setInterval(() => {
+            count++;
+            el.innerText = count;
+            if (count >= stat.value) clearInterval(interval);
+        }, 30);
+    });
+
+    // DEVOPS
+    function updateStats(){
+        let cpu = Math.floor(Math.random()*80)+10;
+        let ram = Math.floor(Math.random()*70)+20;
+
+        document.querySelector(".cpu").style.width = cpu+"%";
+        document.querySelector(".ram").style.width = ram+"%";
+
+        document.getElementById("cpuText").innerText = cpu+"%";
+        document.getElementById("ramText").innerText = ram+"%";
+    }
+    setInterval(updateStats,2000);
 
 });
 </script>
