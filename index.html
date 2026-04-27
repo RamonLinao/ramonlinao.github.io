@@ -114,7 +114,7 @@
 </section>
 
 <!-- ================= PROJECTS ================= -->
-<section class="card fade-in" id="projects">
+<section class="card" id="projects">
     <h2>📂 Projects</h2>
 
     <div class="projects">
@@ -214,7 +214,62 @@ document.addEventListener("DOMContentLoaded", function () {
             if (count >= stat.value) clearInterval(interval);
         }, 30);
     });
+     <script>
+document.addEventListener("DOMContentLoaded", function () {
 
+    // ===== SKILLS =====
+    const skills = {
+        linux: 90,
+        sql: 85,
+        docker: 80,
+        net: 75,
+        win: 85
+    };
+
+    Object.keys(skills).forEach(skill => {
+        const bar = document.querySelector(`.fill.${skill}`);
+        const text = document.querySelector(`.${skill}-text`);
+
+        if (bar) bar.style.width = skills[skill] + "%";
+        if (text) text.innerText = skills[skill] + "%";
+    });
+
+    // ===== SYSTEM STATS =====
+    const stats = [
+        { id: "projects-count", value: 5 },
+        { id: "servers", value: 3 },
+        { id: "uptime", value: 99 },
+        { id: "hours", value: 120 }
+    ];
+
+    stats.forEach(stat => {
+        let count = 0;
+        const el = document.getElementById(stat.id);
+
+        if (!el) return;
+
+        const interval = setInterval(() => {
+            count++;
+            el.innerText = count;
+            if (count >= stat.value) clearInterval(interval);
+        }, 30);
+    });
+
+    // ===== FADE-IN FIX (ADD THIS PART) =====
+    const elements = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
+        });
+    });
+
+    elements.forEach(el => observer.observe(el));
+
+});
+</script>
     // ===== DEVOPS =====
     function updateStats(){
         let cpu = Math.floor(Math.random()*80)+10;
