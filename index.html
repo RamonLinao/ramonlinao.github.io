@@ -271,24 +271,28 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
     // ===== DEVOPS =====
-    function updateStats(){
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    // ===== DEVOPS =====
+    function updateStats() {
         let cpu = Math.floor(Math.random()*80)+10;
         let ram = Math.floor(Math.random()*70)+20;
 
         const cpuBar = document.querySelector(".cpu");
         const ramBar = document.querySelector(".ram");
 
-        if(cpuBar) cpuBar.style.width = cpu+"%";
-        if(ramBar) ramBar.style.width = ram+"%";
+        if (cpuBar) cpuBar.style.width = cpu + "%";
+        if (ramBar) ramBar.style.width = ram + "%";
 
         const cpuText = document.getElementById("cpuText");
         const ramText = document.getElementById("ramText");
 
-        if(cpuText) cpuText.innerText = cpu+"%";
-        if(ramText) ramText.innerText = ram+"%";
+        if (cpuText) cpuText.innerText = cpu + "%";
+        if (ramText) ramText.innerText = ram + "%";
     }
 
-    setInterval(updateStats,2000);
+    setInterval(updateStats, 2000);
 
     // ===== LOGS =====
     const logs = [
@@ -320,6 +324,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 </script>
-
 </body>
 </html>
