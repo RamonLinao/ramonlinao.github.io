@@ -285,7 +285,20 @@ document.querySelectorAll('.fade-in').forEach(el => {
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-    // SKILL VALUES
+    // ===== FADE-IN ANIMATION =====
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
+        });
+    });
+
+    document.querySelectorAll('.fade-in').forEach(el => {
+        observer.observe(el);
+    });
+
+    // ===== SKILLS =====
     const skills = {
         linux: 90,
         sql: 85,
@@ -294,7 +307,6 @@ document.addEventListener("DOMContentLoaded", function () {
         win: 85
     };
 
-    // UPDATE SKILLS
     Object.keys(skills).forEach(skill => {
         const bar = document.querySelector(`.fill.${skill}`);
         const text = document.querySelector(`.${skill}-text`);
@@ -303,52 +315,12 @@ document.addEventListener("DOMContentLoaded", function () {
         if (text) text.innerText = skills[skill] + "%";
     });
 
-    // SYSTEM STATS COUNTER
+    // ===== SYSTEM STATS =====
     const stats = [
         { id: "projects", value: 15 },
         { id: "servers", value: 3 },
         { id: "uptime", value: 99 },
         { id: "hours", value: 24 }
-    ];
-
-    stats.forEach(stat => {
-        let count = 0;
-        const el = document.getElementById(stat.id);
-
-        if (!el) return; // safety
-
-        const interval = setInterval(() => {
-            count++;
-            el.innerText = count;
-            if (count >= stat.value) clearInterval(interval);
-        }, 30);
-    });
-
-});
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-    const skills = {
-        linux: 90,
-        sql: 85,
-        docker: 80,
-        net: 75,
-        win: 85
-    };
-
-    Object.keys(skills).forEach(skill => {
-        const bar = document.querySelector(`.fill.${skill}`);
-        const text = document.querySelector(`.${skill}-text`);
-
-        if (bar) bar.style.width = skills[skill] + "%";
-        if (text) text.innerText = skills[skill] + "%";
-    });
-
-    const stats = [
-        { id: "projects", value: 5 },
-        { id: "servers", value: 3 },
-        { id: "uptime", value: 99 },
-        { id: "hours", value: 120 }
     ];
 
     stats.forEach(stat => {
