@@ -322,3 +322,31 @@ footer {
     overflow-y: auto;
     color: #00ff88;
 }
+
+/* ===== RESUME BUTTONS ===== */
+.resume-buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    background: #38bdf8;
+    color: #000;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #38bdf8;
+}
+
+.btn.outline {
+    background: transparent;
+    border: 2px solid #38bdf8;
+    color: #38bdf8;
+}
