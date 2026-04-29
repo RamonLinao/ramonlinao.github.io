@@ -202,21 +202,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // ===== SKILLS =====
     const skills = [
-        { class: "linux", text: "linux-text", value: 90 },
-        { class: "sql", text: "sql-text", value: 85 },
-        { class: "docker", text: "docker-text", value: 85 },
-        { class: "net", text: "net-text", value: 90 },
-        { class: "win", text: "win-text", value: 88 }
+        { className: "linux", text: "linux-text", value: 90 },
+        { className: "sql", text: "sql-text", value: 85 },
+        { className: "docker", text: "docker-text", value: 85 },
+        { className: "net", text: "net-text", value: 90 },
+        { className: "win", text: "win-text", value: 88 }
     ];
 
     skills.forEach(skill => {
-        const bar = document.querySelector("." + skill.class);
+        const bar = document.querySelector(".fill." + skill.className);
         const text = document.querySelector("." + skill.text);
 
         if (bar) bar.style.width = skill.value + "%";
         if (text) text.innerText = skill.value + "%";
-    });    
-
+    });
+    
     // ===== SYSTEM STATS =====
     const stats = [
         { id: "projects-count", value: 6 },
