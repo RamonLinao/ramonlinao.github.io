@@ -88,7 +88,8 @@ nav a:hover {
     border-radius: 15px;
     padding: 30px;
     margin: 40px auto;
-    width: 90%;
+    max-width: 1200px;
+    width: 100%;
     box-shadow: 0 0 25px rgba(0,0,0,0.6);
 }
 
@@ -317,7 +318,15 @@ footer {
 
 /* LOG BOX */
 .logs {
-    grid-column: span 2;
+    grid-column: span 1;
+}
+
+@media (min-width: 768px) {
+    .logs {
+        grid-column: span 2;
+    }
+}    
+   
     background: black;
     padding: 15px;
     border-radius: 10px;
@@ -394,4 +403,18 @@ footer {
 .light-mode .btn {
     background: #007bff;
     color: white;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* ===== FIX HORIZONTAL SCROLL ===== */
+section, .card, .projects, .dashboard {
+    max-width: 100%;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
 }
