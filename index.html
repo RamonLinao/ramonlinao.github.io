@@ -169,33 +169,36 @@
 </section> <!-- ✅ ADD THIS -->
 
 <!-- ================= DEVOPS ================= -->
-<section class="card">
-    <h2>🖥 DevOps Dashboard</h2>
+ <section class="card">
+        <h2>📊 DevOps Dashboard</h2>
 
-    <div class="dashboard">
+        <div class="dashboard">
 
-        <div class="monitor">
-            <h3>CPU Usage</h3>
-            <div class="bar"><div class="fill cpu"></div></div>
-            <p id="cpuText">0%</p>
+            <div class="monitor">
+                <h3>CPU Usage</h3>
+                <div class="bar">
+                    <div class="fill cpu"></div>
+                </div>
+                <p id="cpuText">0%</p>
+            </div>
+
+            <div class="monitor">
+                <h3>RAM Usage</h3>
+                <div class="bar">
+                    <div class="fill ram"></div>
+                </div>
+                <p id="ramText">0%</p>
+            </div>
+
+            <div class="logs">
+                <h3>System Logs</h3>
+                <div id="logBox"></div>
+            </div>
+
         </div>
+    </section>
 
-        <div class="monitor">
-            <h3>RAM Usage</h3>
-            <div class="bar"><div class="fill ram"></div></div>
-            <p id="ramText">0%</p>
-        </div>
-
-        <div class="logs">
-            <h3>System Logs</h3>
-            <div id="logBox"></div>
-        </div>
-
-    </div>
-</section>
-
-</div> <!-- main-content -->
-
+</div> <!-- ✅ ONLY CLOSE HERE -->
 <!-- ================= SCRIPT (ONLY ONE) ================= -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
