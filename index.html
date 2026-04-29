@@ -116,35 +116,44 @@
 <!-- ================= PROJECTS ================= -->
 <section class="card" id="projects">
     <h2>📂 Projects</h2>
-
     <div class="projects">
 
-        <div class="project">
-            <h3>Apache Web Server</h3>
-            <p>Configured Apache on Linux server.</p>
-        </div>
-
-        <div class="project">
-            <h3>SQL Backup</h3>
-            <p>Created database backup & restore system.</p>
-        </div>
-
-        <div class="project">
-            <h3>Docker Deployment</h3>
-            <p>Containerized apps using Docker.</p>
-        </div>
-
-        <div class="project">
-            <h3>Networking Lab</h3>
-            <p>Configured VLAN and routing.</p>
-        </div>
-
-        <div class="project">
-            <h3>Cloud Deployment</h3>
-            <p>Deployed project to cloud.</p>
-        </div>
-
+    <div class="project">
+        <h3>🌐 Networking (CCNA)</h3>
+        <p>Configured VLANs, routing, and subnetting.</p>
+        <a href="projects/networking.html" class="btn">View Details →</a>
     </div>
+
+    <div class="project">
+        <h3>🖥 Windows Server & AD</h3>
+        <p>Deployed Active Directory and managed users & policies.</p>
+        <a href="projects/windows.html" class="btn">View Details →</a>
+    </div>
+
+    <div class="project">
+        <h3>🛡 Cybersecurity</h3>
+        <p>Performed security analysis and penetration testing.</p>
+        <a href="projects/security.html" class="btn">View Details →</a>
+    </div>
+
+    <a href="projects/docker.html" class="project">
+        <h3>🐳 Docker + Nginx</h3>
+        <p>Containerized apps and deployed using reverse proxy.</p>
+    </div>
+
+    <div class="project">
+        <h3>☁️ Cloud Deployment</h3>
+        <p>Hosted portfolio on Linux server using Nginx.</p>
+        <a href="projects/cloud.html" class="btn">View Details →</a>
+    </div>
+
+    <div class="project">
+        <h3>📊 MIS / Project Management</h3>
+        <p>Designed IT workflows, documentation, and system processes.</p>
+        <a href="projects/mis.html" class="btn">View Details →</a>
+    </div>
+
+</div>
 </section>
 
 <!-- ================= DEVOPS ================= -->
@@ -181,12 +190,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const skills = {
         linux: 90,
         sql: 85,
-        docker: 80,
-        net: 75,
-        win: 85
+        docker: 85,
+        net: 90,
+        win: 90
     };
-
-    Object.keys(skills).forEach(skill => {
+    
+     Object.keys(skills).forEach(skill => {
         const bar = document.querySelector(`.fill.${skill}`);
         const text = document.querySelector(`.${skill}-text`);
 
@@ -196,12 +205,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // ===== SYSTEM STATS =====
     const stats = [
-        { id: "projects-count", value: 5 },
-        { id: "servers", value: 3 },
+        { id: "projects-count", value: 6 },
+        { id: "servers", value: 4 },
         { id: "uptime", value: 99 },
-        { id: "hours", value: 120 }
+        { id: "hours", value: 150 }
     ];
-
     stats.forEach(stat => {
         let count = 0;
         const el = document.getElementById(stat.id);
@@ -279,6 +287,5 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
-</script>
 </body>
 </html>
