@@ -126,44 +126,47 @@
 <!-- ================= PROJECTS ================= -->
 <section class="card" id="projects">
     <h2>📂 Projects</h2>
+
     <div class="projects">
 
-    <div class="project">
-        <h3>🌐 Networking (CCNA)</h3>
-        <p>Configured VLANs, routing, and subnetting.</p>
-        <a href="projects/networking.html" class="btn">View Details →</a>
-    </div>
+        <div class="project">
+            <h3>🌐 Networking (CCNA)</h3>
+            <p>Configured VLANs, routing, and subnetting.</p>
+            <a href="projects/networking.html" class="btn">View Details →</a>
+        </div>
 
-    <div class="project">
-        <h3>🖥 Windows Server & AD</h3>
-        <p>Deployed Active Directory and managed users & policies.</p>
-        <a href="projects/windows.html" class="btn">View Details →</a>
-    </div>
+        <div class="project">
+            <h3>🖥 Windows Server & AD</h3>
+            <p>Deployed Active Directory and managed users & policies.</p>
+            <a href="projects/windows.html" class="btn">View Details →</a>
+        </div>
 
-    <div class="project">
-        <h3>🛡 Cybersecurity</h3>
-        <p>Performed security analysis and penetration testing.</p>
-        <a href="projects/security.html" class="btn">View Details →</a>
-    </div>
+        <div class="project">
+            <h3>🛡 Cybersecurity</h3>
+            <p>Performed security analysis and penetration testing.</p>
+            <a href="projects/security.html" class="btn">View Details →</a>
+        </div>
 
-    <a href="projects/docker.html" class="project">
-        <h3>🐳 Docker + Nginx</h3>
-        <p>Containerized apps and deployed using reverse proxy.</p>
-    </a>
+        <!-- ✅ FULL CLICKABLE -->
+        <a href="projects/docker.html" class="project">
+            <h3>🐳 Docker + Nginx</h3>
+            <p>Containerized apps and deployed using reverse proxy.</p>
+        </a>
 
-    <div class="project">
-        <h3>☁️ Cloud Deployment</h3>
-        <p>Hosted portfolio on Linux server using Nginx.</p>
-        <a href="projects/cloud.html" class="btn">View Details →</a>
-    </div>
+        <div class="project">
+            <h3>☁️ Cloud Deployment</h3>
+            <p>Hosted portfolio on Linux server using Nginx.</p>
+            <a href="projects/cloud.html" class="btn">View Details →</a>
+        </div>
 
-    <div class="project">
-        <h3>📊 MIS / Project Management</h3>
-        <p>Designed IT workflows, documentation, and system processes.</p>
-        <a href="projects/mis.html" class="btn">View Details →</a>
-    </div>
+        <div class="project">
+            <h3>📊 MIS / Project Management</h3>
+            <p>Designed IT workflows, documentation, and system processes.</p>
+            <a href="projects/mis.html" class="btn">View Details →</a>
+        </div>
 
-</section>
+    </div> <!-- ✅ ADD THIS -->
+</section> <!-- ✅ ADD THIS -->
 
 <!-- ================= DEVOPS ================= -->
 <section class="card">
@@ -198,21 +201,21 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     // ===== SKILLS =====
-    const skills = {
-        linux: 90,
-        sql: 85,
-        docker: 85,
-        net: 90,
-        win: 90
-    };
-    
-     Object.keys(skills).forEach(skill => {
-        const bar = document.querySelector(`.fill.${skill}`);
-        const text = document.querySelector(`.${skill}-text`);
+    const skills = [
+        { class: "linux", text: "linux-text", value: 90 },
+        { class: "sql", text: "sql-text", value: 85 },
+        { class: "docker", text: "docker-text", value: 85 },
+        { class: "net", text: "net-text", value: 90 },
+        { class: "win", text: "win-text", value: 88 }
+    ];
 
-        if (bar) bar.style.width = skills[skill] + "%";
-        if (text) text.innerText = skills[skill] + "%";
-    });
+    skills.forEach(skill => {
+        const bar = document.querySelector("." + skill.class);
+        const text = document.querySelector("." + skill.text);
+
+        if (bar) bar.style.width = skill.value + "%";
+        if (text) text.innerText = skill.value + "%";
+    });    
 
     // ===== SYSTEM STATS =====
     const stats = [
@@ -253,7 +256,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     setInterval(updateStats, 2000);
-
+    updateStats(); // run immediately
+    
     // ===== LOGS =====
     const logs = [
         "Initializing server...",
@@ -300,14 +304,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const toggles = document.querySelectorAll('.toggle-btn');
 
     toggles.forEach(btn => {
-    btn.addEventListener('click', () => {
-        document.body.classList.toggle('light-mode');
+        btn.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
         
-        toggles.forEach(b => {
-            b.textContent = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
+            toggles.forEach(b => {
+                b.textContent = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
+            });
         });
     });
-});
 </script>
 </body>
 </html>
