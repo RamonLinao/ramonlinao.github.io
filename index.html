@@ -19,14 +19,17 @@
 
 <!-- ================= NAV ================= -->
 <nav>
+    <nav>
     <h2>Ramon</h2>
     <div>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
+
+        <!-- 🌙 THEME TOGGLE -->
+        <button id="themeToggle" class="toggle-btn">🌙</button>
     </div>
 </nav>
-
 <!-- ================= HERO ================= -->
 <section class="card">
     <h1>Hi, I'm Ramon 👋</h1>
@@ -283,6 +286,27 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     elements.forEach(el => observer.observe(el));
+  
+    // ===== THEME TOGGLE =====
+    const toggleBtn = document.getElementById("themeToggle");
+
+    toggleBtn.addEventListener("click", () => {
+        document.body.classList.toggle("light-mode");
+
+        if (document.body.classList.contains("light-mode")) {
+            toggleBtn.textContent = "☀️";
+            localStorage.setItem("theme", "light");
+        } else {
+            toggleBtn.textContent = "🌙";
+            localStorage.setItem("theme", "dark");
+        }
+    });
+
+    // Load saved theme
+    if (localStorage.getItem("theme") === "light") {
+        document.body.classList.add("light-mode");
+        toggleBtn.textContent = "☀️";
+    }
 
 });
 </script>
