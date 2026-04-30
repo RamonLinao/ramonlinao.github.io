@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Docker + Nginx Project</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<section class="card">
+
+    <h1>🐳 Docker + Nginx Deployment</h1>
+
+    <p>
+        Deployed containerized applications using Docker and configured Nginx 
+        as a reverse proxy for multi-app routing.
+    </p>
+
+    <!-- 🔥 SCREENSHOTS -->
+    <div class="project-images">
+        <img src="../assets/images/docker-nginx.png" class="project-img clickable" alt="Docker Nginx Setup">
+        <img src="../assets/images/docker-containers.png" class="project-img clickable" alt="Docker Containers">
+    </div>
+
+    <!-- 🚀 BUTTONS -->
+    <div class="buttons">
+        <a href="http://192.168.5.137:8080/app1/" target="_blank" class="btn">
+            🚀 Live Demo
+        </a>
+
+        <a href="https://github.com/RamonLinao/ramonlinao.github.io" target="_blank" class="btn">
+            💻 View Code
+        </a>
+    </div>
+
+</section>
+
+<!-- 🔍 LIGHTBOX -->
+<div id="lightbox">
+    <span id="closeBtn">&times;</span>
+    <img id="lightbox-img">
+</div>
+
+<!-- 🔥 LIGHTBOX SCRIPT -->
+<script>
+const images = document.querySelectorAll('.clickable');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const closeBtn = document.getElementById('closeBtn');
+
+images.forEach(img => {
+    img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+    });
+});
+
+closeBtn.onclick = () => {
+    lightbox.style.display = 'none';
+};
+
+lightbox.onclick = (e) => {
+    if (e.target !== lightboxImg) {
+        lightbox.style.display = 'none';
+    }
+};
+</script>
+
+</body>
+</html>
