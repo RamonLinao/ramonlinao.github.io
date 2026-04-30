@@ -81,6 +81,12 @@ nav a:hover {
     box-shadow: 0 0 15px #38bdf8;
 }
 
+.btn.live {
+    background: #00c6ff;
+    margin-top: 10px;
+    display: inline-block;
+}
+
 /* ================= CARD ================= */
 .card {
     background: rgba(255, 255, 255, 0.05);
@@ -202,6 +208,17 @@ nav a:hover {
     transition: 0.3s;
 }
 
+.project-img {
+    width: 100%;
+    border-radius: 12px;
+    margin: 15px 0;
+}
+
+.project-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
 
 /* ================= TAGS ================= */
 .tags {
@@ -318,20 +335,28 @@ footer {
 
 /* LOG BOX */
 .logs {
-    grid-column: span 1;
-}
-
-@media (min-width: 768px) {
-    .logs {
-        grid-column: span 2;
-    }
-}    
-   
     background: black;
     padding: 15px;
     border-radius: 10px;
     font-family: monospace;
     font-size: 12px;
+}
+
+/* Tablet/Desktop */
+@media (min-width: 768px) {
+    .project-images {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+    .logs {
+        grid-column: span 2;
+    }
+}    
+
+.project-images {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
 }
 
 #logBox {
@@ -430,4 +455,11 @@ html, body {
 .main-content {
     margin-left: 250px;
     width: calc(100% - 250px);
+}
+
+.project-img {
+    width: 100%;
+    border-radius: 12px;
+    margin: 20px 0;
+    box-shadow: 0 0 15px rgba(0, 198, 255, 0.3);
 }
