@@ -529,3 +529,12 @@ html, body {
 .clickable {
     cursor: pointer;
 }
+
+#lightbox-img {
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
