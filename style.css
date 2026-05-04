@@ -46,7 +46,7 @@ nav a:hover {
 /* ================= HERO ================= */
 .hero {
     text-align: center;
-    padding: 140px 20px;
+    padding: 120px 20px 60px;
 }
 
 .hero h1 {
@@ -57,6 +57,17 @@ nav a:hover {
 .hero p {
     margin: 20px auto;
     max-width: 700px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    color: #38bdf8;
+}
+
+.hero p {
+    margin-top: 10px;
+    font-size: 18px;
+    opacity: 0.8;
 }
 
 /* ================= BUTTONS ================= */
@@ -176,16 +187,18 @@ nav a:hover {
 .fade-in.show .fill.win { width: 85%; }
 
 /* ================= PROJECTS ================= */
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
-    margin-top: 25px;
+.project {
+    background: rgba(0,0,0,0.6);
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 15px;
+    transition: 0.3s;
+    text-align: center;
 }
 
 .project:hover {
-    transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 0 25px #38bdf8;
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #38bdf8;
 }
 
 .project.highlight {
@@ -194,14 +207,23 @@ nav a:hover {
 
 .project-img {
     width: 100%;
-    border-radius: 12px;
-    margin: 15px 0;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
 }
 
 .project-images {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
 }
 
 /* ================= TAGS ================= */
@@ -337,12 +359,6 @@ footer {
     }
 }    
 
-.project-images {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
-}
-
 #logBox {
     height: 150px;
     overflow-y: auto;
@@ -354,6 +370,15 @@ footer {
     margin-top: 20px;
 }
 
+.project h3 {
+    margin: 10px 0;
+}
+
+.project p {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 15px;
+}
 .btn {
     display: inline-block;
     padding: 10px 20px;
