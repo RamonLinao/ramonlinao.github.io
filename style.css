@@ -411,6 +411,18 @@ footer {
     color: #111;
 }
 
+.light-mode {
+    background:
+        linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.9)),
+        url("./images/light-.jpg");  /* ADD THIS IMAGE */
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: #111;
+}
+
 .light-mode .card {
     background: white;
     color: #111;

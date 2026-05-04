@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+
+  sql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sql_server
+    environment:
+      SA_PASSWORD: "Secret555!"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+
+  api:
+    build: ./api
+    container_name: node_api
+    ports:
+      - "3000:3000"
+    depends_on:
+      - sql
+
+  web:
+    build: ./web
+    container_name: frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - api

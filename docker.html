@@ -13,14 +13,15 @@
     <h1>🐳 Docker + Nginx Deployment</h1>
 
     <p>
-        Deployed containerized applications using Docker and configured Nginx 
+        Deployed containerized applications using Docker and configured Nginx
         as a reverse proxy for multi-app routing.
     </p>
 
-    <!-- 🔥 SCREENSHOTS -->
+    <!-- 🔥 MULTI SCREENSHOT GALLERY -->
     <div class="project-images">
-        <img src="../assets/images/docker-nginx.png" class="project-img clickable" alt="Docker Nginx Setup">
-        <img src="../assets/images/docker-containers.png" class="project-img clickable" alt="Docker Containers">
+        <img src="../project-images/docker/docker1.png" class="project-img clickable">
+        <img src="../project-images/docker/docker2.png" class="project-img clickable">
+        <img src="../project-images/docker/docker3.png" class="project-img clickable">
     </div>
 
     <!-- 🚀 BUTTONS -->
@@ -42,30 +43,7 @@
     <img id="lightbox-img">
 </div>
 
-<!-- 🔥 LIGHTBOX SCRIPT -->
-<script>
-const images = document.querySelectorAll('.clickable');
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
-const closeBtn = document.getElementById('closeBtn');
-
-images.forEach(img => {
-    img.addEventListener('click', () => {
-        lightbox.style.display = 'flex';
-        lightboxImg.src = img.src;
-    });
-});
-
-closeBtn.onclick = () => {
-    lightbox.style.display = 'none';
-};
-
-lightbox.onclick = (e) => {
-    if (e.target !== lightboxImg) {
-        lightbox.style.display = 'none';
-    }
-};
-
+<!-- 🔥 CLEAN SCRIPT -->
 <script>
 const images = document.querySelectorAll('.clickable');
 const lightbox = document.getElementById('lightbox');
