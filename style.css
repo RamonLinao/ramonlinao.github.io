@@ -349,12 +349,21 @@ footer {
 }
 
 /* LOG BOX */
+/* LOG BOX */
 .logs {
     background: black;
     padding: 15px;
     border-radius: 10px;
+
     font-family: monospace;
     font-size: 12px;
+
+    color: #00ff88;
+
+    height: 350px;
+    overflow-y: auto;
+
+    box-shadow: 0 0 15px #38bdf8;
 }
 
 /* Tablet/Desktop */
@@ -363,11 +372,6 @@ footer {
         grid-template-columns: 1fr 1fr;
     }
 }
-    .logs {
-        grid-column: span 2;
-    }
-}    
-
 #logBox {
     height: 150px;
     overflow-y: auto;
