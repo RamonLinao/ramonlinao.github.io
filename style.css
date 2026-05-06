@@ -607,3 +607,21 @@ html, body {
 }
 
 /* Fix any accidental link inheritance */
+/* ===== FINAL LIGHT MODE PROJECT FIX ===== */
+
+.light-mode .project {
+    background: white !important;
+    color: black !important;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.light-mode .project h3,
+.light-mode .project p,
+.light-mode .project a {
+    color: black !important;
+}
+
+.light-mode .project .btn {
+    color: white !important;
+}
