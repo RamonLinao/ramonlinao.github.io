@@ -625,3 +625,61 @@ html, body {
 .light-mode .project .btn {
     color: white !important;
 }
+
+/* LANDING PAGE */
+
+.landing-container {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 100vh;
+
+    gap: 80px;
+
+    padding: 50px;
+
+}
+
+.landing-image img {
+
+    width: 450px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+
+}
+
+.landing-content {
+
+    max-width: 600px;
+
+}
+
+.landing-content h1 {
+
+    font-size: 4rem;
+
+    margin-bottom: 10px;
+
+}
+
+.landing-content h2 {
+
+    color: #4fc3f7;
+
+    margin-bottom: 20px;
+
+}
+
+.landing-content p {
+
+    font-size: 1.2rem;
+
+    line-height: 1.8;
+
+}
