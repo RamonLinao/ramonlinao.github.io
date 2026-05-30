@@ -460,6 +460,18 @@ footer {
     color: #111;
 }
 
+.light-mode nav a {
+    color: #111 !important;
+}
+
+.light-mode nav a:hover {
+    color: #38bdf8 !important;
+}
+
+.light-mode nav h2 {
+    color: #38bdf8 !important;
+}
+
 /* LIGHTBOX */
 #lightbox {
     display: none;
