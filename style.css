@@ -32,6 +32,28 @@ nav h2 {
     color: #38bdf8;
 }
 
+/* ===== RL TECH LOGO ===== */
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.site-logo {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.logo {
+    margin: 0;
+}
+nav h2 {
+    color: #38bdf8;
+}
+
 nav a {
     color: white;
     margin-left: 20px;
@@ -44,6 +66,17 @@ nav a:hover {
 }
 
 /* ================= HERO ================= */
+.hero-logo {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.hero-logo img {
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+}
+
 .hero {
     text-align: center;
     padding: 120px 20px 60px;
