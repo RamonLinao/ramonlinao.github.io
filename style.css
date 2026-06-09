@@ -782,3 +782,15 @@ html, body {
     color: black;
 
 }
+
+/* Contact Links */
+#contact a {
+    color: #4da6ff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#contact a:hover {
+    color: #80c1ff;
+    text-decoration: underline;
+}
