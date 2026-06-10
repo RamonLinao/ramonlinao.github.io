@@ -812,3 +812,39 @@ html, body {
     font-weight: 600;
 }
 
+/* Hero Badge */
+
+.hero-badge {
+
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    margin-bottom: 20px;
+
+    border-radius: 30px;
+
+    background: rgba(77,166,255,0.15);
+
+    border: 1px solid #4da6ff;
+
+    color: #4da6ff;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+/* Hero Summary */
+
+.hero-summary {
+
+    font-size: 1.15rem;
+
+    line-height: 1.9;
+
+    color: rgba(255,255,255,0.92);
+
+    max-width: 650px;
+}
+
