@@ -877,3 +877,20 @@ html, body {
 
     background:black;
 }
+
+/* ================= PORTFOLIO PAGE ================= */
+
+.portfolio-page{
+
+    background:
+        linear-gradient(
+            rgba(0,10,35,.70),
+            rgba(0,0,0,.85)
+        ),
+        url("assets/images/microsoft-surface.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
