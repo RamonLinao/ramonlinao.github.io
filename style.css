@@ -880,18 +880,36 @@ html, body {
 
 /* ================= PORTFOLIO PAGE ================= */
 
-.portfolio-page{
+/* ================= PORTFOLIO DARK MODE ================= */
+
+body.portfolio-page{
 
     background:
         linear-gradient(
-            rgba(0,0,0,.25),
-            rgba(0,0,0,.45)
+            rgba(0,10,35,.80),
+            rgba(0,0,0,.92)
         ),
         url("assets/images/microsoft-surface.png");
 
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: top right;
+    background-position: center;
     background-attachment: fixed;
+}
 
+/* ================= PORTFOLIO LIGHT MODE ================= */
+
+body.portfolio-page.light-mode{
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,.15),
+            rgba(255,255,255,.30)
+        ),
+        url("assets/images/cloudphoto.jpg");
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 }
