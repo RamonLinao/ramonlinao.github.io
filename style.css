@@ -913,3 +913,11 @@ body.portfolio-page.light-mode{
     background-position: center;
     background-attachment: fixed;
 }
+.cloud-project-image {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-bottom: 18px;
+}
