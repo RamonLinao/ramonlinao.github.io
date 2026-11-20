@@ -180,7 +180,7 @@ nav a:hover {
     transition: all 0.3s ease;
 }
 
-/* Glow border */
+/* Glow border — modern cross-browser masking */
 .skill::before {
     content: "";
     position: absolute;
@@ -188,11 +188,19 @@ nav a:hover {
     border-radius: 15px;
     padding: 1px;
     background: linear-gradient(120deg, transparent, #38bdf8, transparent);
+
+    /* Compatibility with older WebKit browsers */
     -webkit-mask:
         linear-gradient(#000 0 0) content-box,
         linear-gradient(#000 0 0);
     -webkit-mask-composite: xor;
+
+    /* Standard CSS masking */
+    mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
     mask-composite: exclude;
+
     opacity: 0;
     transition: 0.3s;
 }
